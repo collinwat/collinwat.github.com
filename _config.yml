@@ -1,0 +1,17 @@
+auto: true
+server: true
+server_port: 5000
+markdown: rdiscount
+pygments: true
+rdiscount:
+  extensions: [smart]
+exclude: [Makefile, README.md]
+
+name: Collin Watson
+url: https://collinwat.com
+permalink: /blog/:title
+description: My mubble bubble website
+email: collinwat@gmail.com
+twitter: collinwat
+github: collinwat
+gravatar_url: http://www.gravatar.com/avatar/d3e5ad3f781c04194959fb88f092882a

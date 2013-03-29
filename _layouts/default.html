@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.name }}</title>
+
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/static/img/apple-touch-icon-144×144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/static/img/static/img/apple-touch-icon-114×114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/static/img/apple-touch-icon-72×72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57×57" href="/static/img/apple-touch-icon-57×57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/static/img/apple-touch-icon-precomposed.png">
+
+    <!--<link rel="alternate" type="application/rss+xml" href="/atom.xml" />-->
+    <link rel="stylesheet" href="/static/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/pygments.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="/static/css/theme.css" type="text/css" />
+    {% if page and page.styles %}
+    {% for script in page.styles %}
+    <link type="text/css" rel="stylesheet" href="{{ script }}" />
+    {% endfor %}
+    {% endif %}
+  </head>
+
+  <body{% if page.id %} id="{{ page.id }}"{% endif %}{% if page.class %} class="{{ page.class }}"{% endif %}>
+    {% include nav.html %}
+    <article>
+      {{ content }}
+    </article>
+    {% include jquery.html %}
+    {% if page and page.scripts %}
+    {% for script in page.scripts %}
+    <script type="text/javascript" src="{{ script }}"></script>
+    {% endfor %}
+    {% endif %}
+    {% include analytics.html %}
+  </body>
+</html>
