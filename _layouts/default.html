@@ -18,26 +18,60 @@
     <!--<link rel="alternate" type="application/rss+xml" href="/atom.xml" />-->
     <link rel="stylesheet" href="/static/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="/static/css/pygments.css" type="text/css" />
-    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="/static/css/theme.css" type="text/css" />
     {% if page and page.styles %}
     {% for script in page.styles %}
     <link type="text/css" rel="stylesheet" href="{{ script }}" />
     {% endfor %}
     {% endif %}
+
+    <!-- enable HTML5 elements in IE7+8 -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
 
-  <body{% if page.id %} id="{{ page.id }}"{% endif %}{% if page.class %} class="{{ page.class }}"{% endif %}>
-    {% include nav.html %}
-    <article>
+  <body{% if page.class %} class="{{ page.class }}"{% endif %}>
+    <header class="site">
+      <div class="wrapper">
+        <a class="avatar" href="/" style="background-image:url('{{ site.gravatar_url }}?s=100');"></a>
+        <div class="stack">
+          <h2 class="name">
+            <a href="/">{{ site.name }}</a>
+          </h2>
+          <section>
+            <ul class="unstyled">
+              <li><a class="icon-info-sign" href="/about/"></a></li>
+              <li><a class="icon-github-alt" href="https://github.com/{{ site.github }}"></a></li>
+              <li><a class="icon-twitter" href="https://twitter.com/{{ site.twitter }}"></a></li>
+              <li><a class="icon-rss" href="/atom.xml"></a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
       {{ content }}
-    </article>
-    {% include jquery.html %}
+    </section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/jquery-1.9.1.min.js"><\/script>')</script>
+
     {% if page and page.scripts %}
     {% for script in page.scripts %}
     <script type="text/javascript" src="{{ script }}"></script>
     {% endfor %}
     {% endif %}
-    {% include analytics.html %}
+
+    {% if site.google.analytics %}
+    <script type="text/javascript">
+      var _gaq=[['_setAccount','{{ site.google.analytics }}'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    {% endif %}
   </body>
 </html>

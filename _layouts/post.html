@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article>
+  <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+  <div class="post">
+    {{ content }}
+  </div>
+  <footer>
+    <p>Have feedback? Love it! <a href="https://twitter.com/{{ site.twitter }}">Tweet</a> or <a href="/about/">contact</a> me.</p>
+  </footer>
+</article>

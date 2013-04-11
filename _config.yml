@@ -9,9 +9,11 @@ exclude: [Makefile, README.md]
 
 name: Collin Watson
 url: http://collinwat.com
-permalink: /blog/:title
+permalink: /:title
 description: My mubble bubble website
 email: collinwat@gmail.com
 twitter: collinwat
 github: collinwat
 gravatar_url: //www.gravatar.com/avatar/d3e5ad3f781c04194959fb88f092882a
+google:
+    analytics: UA-40055318-1

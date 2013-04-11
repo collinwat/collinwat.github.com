@@ -1,18 +1,23 @@
 ---
 layout: default
-id: home
 ---
-{% if site.posts %}
+{% assign postCount = site.posts | size %}
+{% if postCount == 0 %}
+<p>Good gosh darn it. There are no blog posts.</p>
+<p>Please wait for inception...</p>
+{% else %}
 <ul class="unstyled posts">
   {% for post in site.posts %}
   <li>
-    <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <article>
+      <header>
+        <h1>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h1>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      </header>
+    </article>
   </li>
   {% endfor %}
 </ul>
-{% endif %}
-{% if !site.posts %}
-<p>Good gosh darn it. There are no blog posts.</p>
-<p>Please wait for inception...</p>
 {% endif %}
