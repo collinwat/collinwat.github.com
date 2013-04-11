@@ -35,13 +35,14 @@
   <body{% if page.class %} class="{{ page.class }}"{% endif %}>
     <header class="site">
       <div class="wrapper">
-        <a class="avatar" href="/" style="background-image:url('{{ site.gravatar_url }}?s=100');"></a>
+        <a class="avatar" href="/" style="background-image:url('{{ site.gravatar_url }}?s=80');"></a>
         <div class="stack">
           <h2 class="name">
             <a href="/">{{ site.name }}</a>
           </h2>
           <section>
             <ul class="unstyled">
+              <li><a class="icon-home" href="/"></a></li>
               <li><a class="icon-info-sign" href="/about/"></a></li>
               <li><a class="icon-github-alt" href="https://github.com/{{ site.github }}"></a></li>
               <li><a class="icon-twitter" href="https://twitter.com/{{ site.twitter }}"></a></li>

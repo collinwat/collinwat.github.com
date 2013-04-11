@@ -33,6 +33,15 @@ a {
     color: #16A4E0;
 }
 
+a,
+a:hover {
+    -webkit-transition: color 0.33s;
+       -moz-transition: color 0.33s;
+        -ms-transition: color 0.33s;
+         -o-transition: color 0.33s;
+            transition: color 0.33s;
+}
+
 a:hover,
 header.site h2 a:hover,
 header.site a[class^="icon-"]:hover {
@@ -81,31 +90,17 @@ header.site {
     top: 0px;
     left: 0px;
     width: 250px;
-    background-color: #032625;
     height: 100%;
-    background: url('../img/paper.png') repeat center;
-
-    -webkit-box-shadow: inset -10px 0px 3px -7px #ccc;
-       -moz-box-shadow: inset -10px 0px 3px -7px #ccc;
-        -ms-box-shadow: inset -10px 0px 3px -7px #ccc;
-         -o-box-shadow: inset -10px 0px 3px -7px #ccc;
-            box-shadow: inset -10px 0px 3px -7px #ccc;
-}
-
-header.site .wrapper {
-    position: absolute;
-    max-height: 310px;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin: auto;
+    background-color: #fff;
+    border-right: solid 1px #ccc;
+    overflow: auto;
 }
 
 header.site h2 {
     text-align: center;
     text-transform: uppercase;
     font-size: 0.9rem;
+    margin-bottom: 3rem;
 }
 
 header.site h2 a {
@@ -119,25 +114,34 @@ header.site a {
 
 header.site a[class^="icon-"] {
     color: #666;
-    font-size: 1.2em;
-    width: 1.42em;
-    height: 1.7em;
-    line-height: 1.6em;
+    font-size: 2.2em;
     text-align: center;
     vertical-align: middle;
     padding: 1px;
+    width: 1.75em;
+    height: 1.75em;
+    line-height: 1.75em;
     -webkit-border-radius: 50%;
        -moz-border-radius: 50%;
         -ms-border-radius: 50%;
          -o-border-radius: 50%;
             border-radius: 50%;
+    -webkit-transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
+       -moz-transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
+        -ms-transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
+         -o-transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
+            transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
 }
 
 header.site a[class^="icon-"]:hover {
-    font-size: 1.7em;
-    width: 1em;
-    height: 1.2em;
-    line-height: 1.2em;
+    font-size: 3em;
+    line-height: 1.28em;
+    height: 1.28em;
+    -webkit-transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
+       -moz-transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
+        -ms-transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
+         -o-transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
+            transition: height 0.25s, color 0.25s, font-size 0.25s, line-height 0.25s;
 }
 
 header.site ul {
@@ -146,14 +150,14 @@ header.site ul {
 
 header.site li {
     text-align: center;
-    display: inline-block;
+    display: block;
 }
 
 header.site a.avatar {
     display: block;
-    margin: 0px auto 25px auto;
-    width: 100px;
-    height: 100px;
+    margin: 0px auto 10px auto;
+    width: 80px;
+    height: 80px;
 
     -webkit-box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5), inset 0 0 2px 1px rgba(0,0,0,0.05);
        -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5), inset 0 0 2px 1px rgba(0,0,0,0.05);
@@ -227,14 +231,10 @@ header.site {
     right: 0px;
     width: 100%;
     margin: 0px;
-    transition: none;
     padding: 10px 15px;
     text-align: center;
-    -webkit-box-shadow: inset 0px 10px 8px -5px #ccc;
-       -moz-box-shadow: inset 0px 10px 8px -5px #ccc;
-        -ms-box-shadow: inset 0px 10px 8px -5px #ccc;
-         -o-box-shadow: inset 0px 10px 8px -5px #ccc;
-            box-shadow: inset 0px 10px 8px -5px #ccc;
+    border: 0;
+    border-top: solid 1px #ccc;
 }
 
 header.site:before {
@@ -252,56 +252,57 @@ header.site:before {
 }
 
 header.site .wrapper {
-    height: 90px;
-    width: 375px;
-    margin: 35px auto 0px;
-}
-
-header.site a.avatar {
-    width: 60px;
-    height: 60px;
-    margin: 0px;
-    display: inline-block;
-}
-
-header.site a[class^="icon-"] {
-    font-size: 1.4em;
-    width: 1.2em;
-    height: 1.7em;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
 
 header.site h2,
 header.site section,
 header.site a.avatar {
-    display: inline;
     position: absolute;
     left: 0px;
     right: 0px;
-    top: 0px;
-    bottom: auto;
-    vertical-align: middle;
-    margin: auto;
+    top: 20px;
+    bottom: 0px;
 }
 
 header.site h2 {
-    margin-left: 15px;
     right: auto;
+    left: 100px;
 }
 
 header.site section {
-    top: -4px;
-    margin-right: -10px;
     left: auto;
+    right: 30px;
 }
 
 header.site a.avatar {
-    top: -15px;
+    left: 30px;
+    top: 15px;
     bottom: auto;
+    margin: 0px;
+    width: 60px;
+    height: 60px;
+    background-size: 60px;
+    display: block;
+}
+
+header.site a[class^="icon-"] {
+    font-size: 1.8em;
+    width: 2em;
+}
+
+header.site a[class^="icon-"]:hover {
+    font-size: 2.5em;
+    width: 1.44em;
+    line-height: 1em;
 }
 
 header.site li {
     display: inline-block;
-    vertical-align: middle;
     margin-left: 10px;
 }
 
@@ -315,12 +316,38 @@ header.site a {
 
 section.content {
     margin: 0px;
-    transition: none;
     padding-bottom: 120px;
 }
 
 }
 
+
+@media (max-width:600px) {
+
+header.site a.avatar {
+    left: 15px;
+}
+
+header.site h2 {
+    left: 90px;
+}
+
+header.site section {
+    right: 15px;
+}
+
+header.site a[class^="icon-"] {
+    font-size: 1.7em;
+    width: 1.1em;
+}
+
+header.site a[class^="icon-"]:hover {
+    font-size: 2em;
+    width: 0.95em;
+    line-height: 1em;
+}
+
+}
 
 @media (max-width:480px) {
 
@@ -337,29 +364,24 @@ header.site {
     right: 0px;
     width: 100%;
     margin: 0px;
-    transition: none;
     padding: 12px 15px;
     text-align: center;
-    -webkit-box-shadow: inset 0px -10px 8px -5px #ccc;
-       -moz-box-shadow: inset 0px -10px 8px -5px #ccc;
-        -ms-box-shadow: inset 0px -10px 8px -5px #ccc;
-         -o-box-shadow: inset 0px -10px 8px -5px #ccc;
-            box-shadow: inset 0px -10px 8px -5px #ccc;
+    border: 0;
+    border-bottom: solid 1px #ccc;
 }
 
 header.site .wrapper {
     position: static;
     margin: auto;
     text-align: left;
-    width: 240px;
+    width: 275px;
 }
 
 header.site h2,
 header.site a.avatar,
 header.site section {
-    text-align: left;
     position: static;
-    width: auto;
+    text-align: left;
     display: inline-block;
     margin: 0px;
 }
@@ -370,6 +392,7 @@ header.site .stack {
 
 header.site h2,
 header.site section {
+    width: auto;
     display: block;
 }
 
@@ -378,8 +401,6 @@ header.site h2 {
 }
 
 header.site a.avatar {
-    width: 60px;
-    height: 60px;
     margin: 0px 20px 0px 0px;
     float: left;
 }
@@ -392,7 +413,6 @@ header.site a[class^="icon-"] {
 
 section.content {
     margin: 0px;
-    transition: none;
     padding-bottom: 20px;
     padding-top: 150px;
 }
