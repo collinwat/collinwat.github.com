@@ -36,3 +36,13 @@ Build the site with:
 Run the development site with:
 
     make run
+
+# License
+The following directories and their contents are Copyright Collin Watson. You may not reuse anything therein without my permission:
+
+- \_posts/
+- images/
+
+All other directories and files are MIT Licensed.
+
+Feel free to use the HTML and CSS as you please. A link back to [collinwat.com](http://collinwat.com) would be appreciated, but is not required.
