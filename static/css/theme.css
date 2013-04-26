@@ -6,7 +6,7 @@
 
 body {
     font-size: 18px;
-    line-height: 1.7em;
+    line-height: 1.2em;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
@@ -33,6 +33,11 @@ a {
     color: #16A4E0;
 }
 
+p {
+    margin: 15px 0px;
+    line-height: 1.5em;
+}
+
 a,
 a:hover {
     -webkit-transition: color 0.33s;
@@ -40,6 +45,15 @@ a:hover {
         -ms-transition: color 0.33s;
          -o-transition: color 0.33s;
             transition: color 0.33s;
+}
+
+code,
+pre {
+    line-height: 1.5em;
+}
+
+img {
+    max-width: 100%;
 }
 
 a:hover,
@@ -74,6 +88,48 @@ ol.unstyled {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
+}
+
+.highlight {
+    overflow: auto;
+    background-color: #f8f8ff;
+    font-size: 0.8em;
+    padding: 0px 12px;
+    border: 1px solid #dedede;
+}
+
+.highlight.lines {
+    background-color: transparent;
+    padding: 0px;
+    border: 0;
+}
+
+.highlight table {
+    font-size: 1em;
+    font-family: monospace, serif;
+}
+
+.highlight table th {
+    text-align: left;
+}
+
+.highlight table th,
+.highlight table td {
+    padding-left: 10px;
+}
+
+.highlight table th:first-child,
+.highlight table td:first-child {
+    padding-left: 0px;
+}
+
+table.nowrap {
+    overflow: auto;
+}
+
+table.nowrap th,
+table.nowrap td {
+    white-space: nowrap;
 }
 
 table.labels td {
@@ -208,6 +264,7 @@ section.content h6 {
 
 section.content .post {
     margin-top: 1.3rem;
+    font-size: 15px;
 }
 
 .posts article h1 {
@@ -426,6 +483,4 @@ header.site a[class^="icon-"] {
     font-size: 1.4em;
     width: 1.2em;
     height: 1.7em;
-}
-
 }
