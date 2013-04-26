@@ -131,10 +131,11 @@ the mouse as little as possible. However, every once in a while I just
 want to resize a pane with my mouse or scroll back with my mouse. Having
 that extra nicety just feels good.
 
-There is one draw back: mouse mode does not support selection. When I
-scroll back to find something, I can't select it and copy it. It will
-jump back to the command prompt. I'd love to figure out a way toget tmux
-selection with mouse select.
+There is one draw back: mouse mode does not support selection.
+
+When I scroll back to find something and select it, the mouse up event causes
+the buffer to jump back to the command prompt and deselects the
+selection.
 
 There are two ways around this:
 
