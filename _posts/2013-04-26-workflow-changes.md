@@ -139,10 +139,10 @@ selection.
 
 There are two ways around this:
 
-1. Disable mouse mode before selecting text (^J+M)
+1. Disable mouse mode before selecting text: `^J M`
 1. Hold down the option key while selecting text
 
-Both are not ideal but tolerable given the benefits of tmux.
+Both are not ideal but tolerable, given the benefits of tmux.
 
 
 ## iTerm2
