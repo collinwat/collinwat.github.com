@@ -3,7 +3,7 @@ layout: post
 title: Workflow Changes
 ---
 
-Yesterday I was reading through my [Ruby Weekly](http://rubyweekly.com/)
+Yesterday I was reading through my [Ruby Weekly](http://rubyweekly.com/archive/142.html)
 email and got sucked into a
 [tmux workflow video](http://confreaks.com/videos/2291-larubyconf2013-impressive-ruby-productivity-with-vim-and-tmux).
 Although I have used tmux remotely, this video inspired me to add tmux to my
