@@ -10,7 +10,7 @@ exclude: [Makefile, README.md]
 name: Collin Watson
 url: http://collinwat.com
 permalink: /:title
-description: My mubble bubble website
+description: Personal space to share ideas and experiences
 email: collinwat@gmail.com
 twitter: collinwat
 github: collinwat
