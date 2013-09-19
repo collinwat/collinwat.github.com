@@ -245,6 +245,7 @@ header.site a.avatar:hover {
 }
 
 section.content {
+    position: relative;
     margin-left: 250px;
     padding: 40px 7%;
 }
@@ -262,23 +263,47 @@ section.content h6 {
     margin-bottom: 0.3rem;
 }
 
+section.content h2.title {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-bottom: 6px;
+  font-size: 1.2em;
+  color: #666;
+  font-weight: normal;
+  border-bottom: solid 1px #ccc;
+  margin-top: 0px;
+  margin-bottom: 2rem;
+}
+
 section.content .post {
     margin-top: 1.3rem;
     font-size: 15px;
 }
 
-.posts article h1 {
+.column {
+  padding-left: 7%;
+  padding-right: 7%;
+  width: 50%;
+  position: absolute;
+  left: 0px;
+}
+
+.column-xp {
+  left: auto;
+  right: 0px;
+}
+
+.column li {
+    display: block;
+    margin: 0px 0px 20px;
+}
+
+.column li h1 {
     font-size: 1.2em;
 }
 
 h1 a,
 h1 a:hover {
     text-decoration: none;
-}
-
-.posts li {
-    display: block;
-    margin: 0px 0px 20px;
 }
 
 
@@ -483,4 +508,20 @@ header.site a[class^="icon-"] {
     font-size: 1.4em;
     width: 1.2em;
     height: 1.7em;
+}
+
+section.content,
+section.content .column {
+    position: static;
+    width: auto;
+}
+
+section.content .column {
+    margin-top: 50px;
+}
+
+section.content .column:first-child {
+    margin-top: 0px;
+}
+
 }
